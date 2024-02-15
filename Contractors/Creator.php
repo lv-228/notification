@@ -10,7 +10,7 @@ class Creator implements ContractorsInterface {
 
     private function __construct(){};
 
-    public static function getById($id): self 
+    public static function getById(int $id): self 
     {
         return new self($id);
     }
