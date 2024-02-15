@@ -176,8 +176,8 @@ class ComplaintOperation extends ReferencesOperation
             (int)$data['notificationType'] ?? null === self::TYPE_CHANGE 
             && !empty($data['differences'] ?? null)
         ) {
-            $differences['FROM'] = Events::byCode[(int)$data['differences']['from'] ?? null] ?? null;
-            $differences['TO']   = Events::byCode[(int)$data['differences']['to'] ?? null] ?? null;
+            $differences['FROM'] = ComplaintEvents::byCode[(int)$data['differences']['from'] ?? null] ?? null;
+            $differences['TO']   = ComplaintEvents::byCode[(int)$data['differences']['to'] ?? null] ?? null;
         }
 
         $result = [

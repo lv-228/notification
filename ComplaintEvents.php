@@ -2,7 +2,7 @@
 
 namespace NW\WebService\References\Operations\Notification;
 
-class Events
+class ComplaintEvents
 {
     const byCode = [
         0 => 'Completed',
