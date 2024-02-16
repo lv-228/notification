@@ -1,6 +1,6 @@
 <?php
 
-namespace NW\WebService\References\Operations\Notification\Contractors;
+namespace Contractors;
 
 class ContractorsFactory {
 

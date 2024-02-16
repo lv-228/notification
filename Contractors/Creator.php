@@ -1,28 +1,11 @@
 <?php
 
-namespace NW\WebService\References\Operations\Notification\Contractors;
+namespace Contractors;
 
-class Creator implements ContractorsInterface {
+class Creator extends Contractors {
 
-    protected $id;
-    protected $name;
-    protected $surName;
-
-    private function __construct(){};
-
-    public static function getById(int $id): self 
-    {
+    public static function getById(int $id): self {
         return new self($id);
-    }
-
-    public function getFullName(): string 
-    {
-        return $this->name . ' ' . $this->surName;
-    }
-
-    public function getId(): int
-    {
-        return $this->id;
     }
 
 }

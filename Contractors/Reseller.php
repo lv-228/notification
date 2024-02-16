@@ -1,49 +1,31 @@
 <?php
 
-namespace NW\WebService\References\Operations\Notification\Contractors;
+namespace Contractors;
 
-class Reseller implements ContractorsInterface {
+class Reseller extends Contractors {
 
-    protected $id;
-    protected $name;
-    protected $surName;
-    protected $email;
-
-    private function __construct(){};
-
-    public static function getById(int $id): self 
-    {
+    public static function getById(int $id): self {
         return new self($id);
     }
 
-    public function getFullName(): string 
-    {
-        return $this->name . ' ' . $this->surName;
-    }
-
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-    public function getEmailsByStatus(string $status): array 
+    public function getResellerEmailsByEvent(int $id, string $event): array 
     {
         return ['someemeil@example.com', 'someemeil2@example.com'];
     }
 
-    public static function getEmail(): string
+    public static function getResellerEmailById(int $id): string
     {
-        return $this->email;
+        return 'contractor@example.com';
     }
 
     public function getComplaintEmailSubject(): string
     {
-        return 'complaintResellerEmailSubject';
+        return 'complaintEmployeeEmailSubject';
     }
 
     public function getComplaintEmailBody(): string
     {
-        return 'complaintResellerEmailBody';
+        return 'complaintEmployeeEmailBody';
     }
 
 }

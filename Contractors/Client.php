@@ -1,35 +1,20 @@
 <?php
 
-namespace NW\WebService\References\Operations\Notification\Contractors;
+namespace Contractors;
 
-class Client implements ContractorsInterface {
+class Client extends Contractors {
 
-    protected $id;
-    protected $name;
-    protected $surName;
     protected $email;
     protected $mobile;
 
-    private function __construct(){};
-
-    public static function getById(int $id): self 
+    public static function getById($id): self 
     {
         return new self($id);
-    }
-
-    public function getFullName(): string 
-    {
-        return $this->name . ' ' . $this->surName;
     }
 
     public function getEmail(): string
     {
         return $this->email;
-    }
-
-    public function getId(): int
-    {
-        return $this->id;
     }
 
     public function getMobile(): string
